@@ -1,3 +1,6 @@
+local utils = require "astronvim.utils"
+local extend_tbl = utils.extend_tbl
+
 return {
   "hrsh7th/nvim-cmp",
   dependencies = { "zbirenbaum/copilot.lua" },
@@ -56,7 +59,7 @@ return {
         if copilot.is_visible() then copilot.dismiss() end
     end)
     
-    return astronvim.extend_tbl(opts, {
+    return extend_tbl(opts, {
       completion = {
         completeopt = "menu,menuone,noinsert",
       },
